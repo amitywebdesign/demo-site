@@ -252,7 +252,7 @@ const css = `
   @keyframes toastOut { to { opacity: 0; transform: translateX(-50%) translateY(20px); } }
 `;
 
-export default function DemoSite() {
+function DemoSite() {
   const [page, setPage] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceId, setServiceId] = useState(null);
@@ -665,3 +665,5 @@ export default function DemoSite() {
     </div>
   );
 }
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<DemoSite />);
